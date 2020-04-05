@@ -4,5 +4,5 @@
   publish="public"
 
 [build]
-  command="npm run build && node -p 'process.env'"
+  command="npm run build"
   publish="public"
