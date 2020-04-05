@@ -10,6 +10,12 @@ Install the dependencies:
 npm install
 ```
 
+Add OpenWeatherMap API key in `.env` file:
+
+```
+OPEN_WEATHER_MAP_API_KEY=value
+```
+
 Run local server on [port 5000](http://localhost:5000):
 
 ```bash

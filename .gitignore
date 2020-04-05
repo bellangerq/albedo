@@ -1,6 +1,14 @@
+# Packages
 /node_modules/
+
+# Built site
 /public/build/
 
+# Env files
 .env
 
+# Mac trash
 .DS_Store
+
+# Local Netlify folder
+.netlify

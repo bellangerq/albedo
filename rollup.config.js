@@ -50,12 +50,12 @@ export default {
 		// instead of npm run dev), minify
 		production && terser(),
 
+		// Load environment variables
 		replace({
-      // stringify the object
       process: JSON.stringify({
         env: {
-          isProd: production,
-          ...config().parsed // attached the .env config
+					isProd: production,
+          ...config().parsed
         }
       }),
     })
