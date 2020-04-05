@@ -2,3 +2,7 @@
   command="npm run dev"
   port=5000
   publish="public"
+
+[build]
+  command="npm run build && node -p 'process.env'"
+  publish="public"
