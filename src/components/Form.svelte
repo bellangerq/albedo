@@ -25,17 +25,17 @@
   };
 
   const submitLocation = (lat, lon) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c691215a31fda1f018eae07089269558&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPENWEATHERMAP_API_KEY}&units=metric`;
 
     fetch(url)
-      .then((response) => {
+      .then(response => {
         if (!response.ok) {
           apiError = `Error ${response.status}: ${response.statusText}`;
           return;
         }
         return response.json();
       })
-      .then((data) => {
+      .then(data => {
         loading = false;
         dispatch("fetch", {
           temperature: Math.round(data.main.temp),
