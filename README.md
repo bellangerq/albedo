@@ -25,3 +25,9 @@ npm run dev
 ## Deployment
 
 Every push on `master` branch will trigger a deployment on `https://albedo.netlify.com`.
+
+## Svelte feedbacks
+
+- Lack of documentation about using Sass and importing `assets` (global styles, images...).
+- The syntax is nice (maybe it's only due to switching from another one that makes it cool).
+- Simple transitions are easy to setup with just an attribute.

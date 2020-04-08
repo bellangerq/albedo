@@ -10,21 +10,25 @@
 	}
 </script>
 
-<Header />
-<main>
-	<Form on:fetch={setWeather} />
-	{#if weather}
-		<Weather weather={weather} />
-	{/if}
-</main>
+<div class="App">
+	<Header />
+	<main>
+		{#if weather}
+			<Weather weather={weather} />
+		{:else}
+			<Form on:fetch={setWeather} />
+		{/if}
+	</main>
+</div>
 
 <style>
-	:global(.visually-hidden) {
-		position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-	}
+/* https://dribbble.com/shots/10942038-sunny-app-preview */
+:global(.visually-hidden) {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
 </style>
