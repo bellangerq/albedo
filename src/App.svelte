@@ -23,12 +23,10 @@
 
 <style>
 /* https://dribbble.com/shots/10942038-sunny-app-preview */
-:global(.visually-hidden) {
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap;
+.App {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: 1rem;
 }
 </style>

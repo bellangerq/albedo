@@ -40,6 +40,8 @@
         dispatch("fetch", {
           temperature: Math.round(data.main.temp),
           feelsLike: Math.round(data.main.feels_like),
+          minTemperature: Math.round(data.main.temp_min),
+          maxTemperature: Math.round(data.main.temp_max),
           humidity: data.main.humidity,
           wind: Math.round(data.wind.speed * 3.6),
         })
@@ -48,6 +50,7 @@
 </script>
 
 <section class="Form">
+  <p>Get the weather at your current location.</p>
   <button
     type="button"
     class="Form__Button"
