@@ -2,7 +2,7 @@
   "name": "albedo",
   "version": "1.0.0",
   "scripts": {
-    "build": "node ./build.js && rollup -c",
+    "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
     "test": "jest src",

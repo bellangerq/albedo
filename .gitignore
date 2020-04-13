@@ -5,7 +5,7 @@
 /public/build/
 
 # Env files
-.env
+# .env
 
 # Mac trash
 .DS_Store
