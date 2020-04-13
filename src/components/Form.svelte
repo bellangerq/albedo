@@ -37,7 +37,6 @@
         return response.json()
       })
       .then(data => {
-        console.log(data)
         dispatch("fetch", {
           temperature: Math.round(data.main.temp),
           feelsLike: Math.round(data.main.feels_like),
