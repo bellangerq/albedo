@@ -1,6 +1,7 @@
 :root {
-  --color-main: #e64c4c;
-  --color-main-light: #503cf4;
+  --color-main: #ae3838;
+  --color-secondary: #3d2dba;
+  --color-white: #ffffff;
 
-  --font-family: sans-serif;
+  --font-family: 'Nunito Sans', 'Roboto', sans-serif;
 }

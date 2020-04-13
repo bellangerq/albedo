@@ -4,17 +4,22 @@
 	import Weather from './components/Weather.svelte'
 
 	let weather
+	let isCelcius = true
 
 	const setWeather = event => {
 		weather = event.detail
 	}
+
+	const setUnit = event => {
+		isCelcius = event.detail
+	}
 </script>
 
 <div class="App">
-	<Header />
+	<Header on:unit={setUnit} />
 	<main>
 		{#if weather}
-			<Weather weather={weather} />
+			<Weather weather={weather} isCelcius={isCelcius} />
 		{:else}
 			<Form on:fetch={setWeather} />
 		{/if}
