@@ -10,7 +10,7 @@
   }
 </script>
 
-<div transition:fade="{{ duration: 500, delay: 500 }}" class="Weather">
+<div transition:fade="{{ duration: 500, delay: 500 }}" class="Weather" aria-live="polite">
   <div class="Weather__Primary">
     {#if weather.temperature}
       <span class="Weather__Temperature">

@@ -57,10 +57,13 @@
     transition-duration: 0.2s;
   }
 
-  .Header__Button:focus,
   .Header__Button:hover {
     background: var(--color-white);
     color: var(--color-secondary);
+  }
+
+  .Header__Button:focus {
+    box-shadow: 0 0 0 3px var(--color-outline);
     outline: none;
   }
 </style>

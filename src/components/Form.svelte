@@ -9,6 +9,7 @@
   const dispatch = createEventDispatcher()
 
   const getLocation = () => {
+    if (loading) return
     loading = true
     navigator.geolocation.getCurrentPosition(success, error)
   }
@@ -49,13 +50,12 @@
   }
 </script>
 
-<section class="Form">
+<div class="Form">
   <button
     transition:fade="{{ duration: 500 }}"
     type="button"
     class="Form__Button"
     class:Form__Button--Loading="{loading}"
-    disabled="{loading}"
     on:click="{getLocation}"
   >
     {#if loading }
@@ -79,7 +79,7 @@
       {/if}
     </p>
   {/if}
-</section>
+</div>
 
 <style>
   .Form {
@@ -106,11 +106,14 @@
     width: 12rem;
   }
 
-  .Form__Button:focus,
   .Form__Button:hover {
     background: var(--color-white);
     border-color: transparent;
     color: var(--color-secondary);
+  }
+
+  .Form__Button:focus {
+    box-shadow: 0 0 0 3px var(--color-outline);
     outline: none;
   }
 
