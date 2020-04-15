@@ -45,6 +45,8 @@
           maxTemperature: Math.round(data.main.temp_max),
           humidity: data.main.humidity,
           wind: Math.round(data.wind.speed * 3.6),
+          weatherDesc: data.weather[0].description,
+          weatherNumber: data.weather[0].id.toString()
         })
       })
   }
