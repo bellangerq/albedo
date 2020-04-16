@@ -204,6 +204,8 @@
   }
 
   .Weather__Separator {
+    border-radius: 3px;
+    border: none;
     border-top: 2px solid var(--color-white);
     margin: 2rem 0 4rem;
     width: 15%;
